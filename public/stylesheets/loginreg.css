@@ -1,0 +1,33 @@
+body {
+	background: url(../img/loginbackground.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.jumbotron {
+	text-align: center;
+	background-color: rgba(197, 221, 226, 0.8);
+	height: 250px;
+
+}
+hr {
+	width:400;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+#heading {
+	font-weight: 700;
+	color: #fffb87;
+	text-shadow: 8px 4px 3px rgba(0,0,0,0.4),
+				8px 8px 13px rgba(0,0,0,0.1),
+				8px 18px 23px rgba(0,0,0,0.1);
+}
+.heading {
+	color: white;
+}
+.btn, .btn-default {
+	margin-top: 25px;
+}
+label {
+	color: white;
+	text-decoration: underline;
+}

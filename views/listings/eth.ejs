@@ -1,0 +1,23 @@
+<% include ../partials/header %>
+
+<h1>Ethereum Listings</h1>
+<br>
+
+<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+    <% ethListings.forEach(function(ethListing){ %>
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail" id="complayout">
+                <div class="caption">
+                    <h4><%= ethListing.title %></h4>
+                </div>
+                <h6><%= ethListing.price %></h6>
+                <p>
+                    <a href="/listings/eth/<%= ethListing._id %>" class="btn btn-primary">More info</a>
+                </p>
+            </div>
+        </div>
+    <% }); %>
+</div>
+</div>
+
+<% include ../partials/footer %>

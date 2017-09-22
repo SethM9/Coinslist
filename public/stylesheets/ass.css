@@ -1,0 +1,256 @@
+#btc {
+    padding: 5px;
+    background: -webkit-linear-gradient(left top, #C57519, #F6931F); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #C57519, #F6931F); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #C57519, #F6931F); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #C57519, #F6931F); /* Standard syntax */
+  }
+
+body {
+    background-color: #F1F1F1;
+}
+
+h4 {
+    text-align: center;
+    color: white;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+#btcDropdown {
+    background-color: white;
+    border-color: white;
+    color: #F89623;
+    margin-left: 65px;
+}
+
+.box{
+	width:80px;
+	-webkit-transition:all .5s;
+	background-color:#FFFFFF;
+	line-height:40px;
+	text-align:center;
+	font-weight:bold;
+	color:#F89623;
+	border-radius:5px;
+	box-shadow:0px 0px 2px rgba(0,0,0,.5),
+	1px 1px 5px rgba(0,0,0,.3);
+	cursor:pointer;
+    display: inline-block;
+}
+
+.box:hover{
+	background-color:#F89623;
+	color:white;
+
+}
+
+.box2{
+	width:80px;
+	-webkit-transition:all .5s;
+	background-color:white;
+	line-height:40px;
+	text-align:center;
+	font-weight:bold;
+	color:#F89623;
+	border-radius:5px;
+	box-shadow:0px 0px 2px rgba(0,0,0,.5),
+	1px 1px 5px rgba(0,0,0,.3);
+    cursor:pointer;
+    float: right;
+}
+
+.box2:hover{
+	background-color:#F89623;
+	color:white;
+
+}
+
+#eth {
+    padding: 5px;
+    background: -webkit-linear-gradient(left top, #5C6BC0, #9FA8DA); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #5C6BC0, #9FA8DA); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #5C6BC0, #9FA8DA); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #5C6BC0, #9FA8DA); /* Standard syntax */
+  }
+
+#ethDropdown {
+    background-color: white;
+    border-color: white;
+    color: #5C6BC0;
+    margin-left: 65px;
+}
+
+.box3{
+	width:80px;
+	-webkit-transition:all .5s;
+	background-color:#FFFFFF;
+	line-height:40px;
+	text-align:center;
+	font-weight:bold;
+	color:#5C6BC0;
+	border-radius:5px;
+	box-shadow:0px 0px 2px rgba(0,0,0,.5),
+	1px 1px 5px rgba(0,0,0,.3);
+	cursor:pointer;
+    display: inline-block;
+}
+
+.box3:hover{
+	background-color:#5C6BC0;
+	color:white;
+
+}
+
+.box4{
+	width:80px;
+	-webkit-transition:all .5s;
+	background-color:white;
+	line-height:40px;
+	text-align:center;
+	font-weight:bold;
+	color:#5C6BC0;
+	border-radius:5px;
+	box-shadow:0px 0px 2px rgba(0,0,0,.5),
+	1px 1px 5px rgba(0,0,0,.3);
+    cursor:pointer;
+    float: right;
+}
+
+.box4:hover{
+	background-color:#5C6BC0;
+	color:white;
+}
+
+#ltc {
+    padding: 5px;
+    background: -webkit-linear-gradient(left top, #868686, #EEEEEE); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #868686, #EEEEEE); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #868686, #EEEEEE); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #868686, #EEEEEE); /* Standard syntax */
+  }
+
+#ltcDropdown {
+    background-color: white;
+    border-color: white;
+    color: #868686;
+    margin-left: 65px;
+}
+
+.box5{
+	width:80px;
+	-webkit-transition:all .5s;
+	background-color:#FFFFFF;
+	line-height:40px;
+	text-align:center;
+	font-weight:bold;
+	color:#868686;
+	border-radius:5px;
+	box-shadow:0px 0px 2px rgba(0,0,0,.5),
+	1px 1px 5px rgba(0,0,0,.3);
+	cursor:pointer;
+    display: inline-block;
+}
+
+.box5:hover{
+	background-color:#868686;
+	color:white;
+
+}
+
+.box6{
+	width:80px;
+	-webkit-transition:all .5s;
+	background-color:white;
+	line-height:40px;
+	text-align:center;
+	font-weight:bold;
+	color:#868686;
+	border-radius:5px;
+	box-shadow:0px 0px 2px rgba(0,0,0,.5),
+	1px 1px 5px rgba(0,0,0,.3);
+    cursor:pointer;
+    float: right;
+}
+
+.box6:hover{
+	background-color:#868686;
+	color:white;
+}
+
+
+#xrp {
+    padding: 5px;
+    background: -webkit-linear-gradient(left top, #00659C, #00A7E1); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #00659C, #00A7E1); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #00659C, #00A7E1); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #00659C, #00A7E1); /* Standard syntax */
+  }
+
+#xrpDropdown {
+    background-color: white;
+    border-color: white;
+    color: #00659C;
+    margin-left: 65px;
+}
+
+.box7{
+	width:80px;
+	-webkit-transition:all .5s;
+	background-color:#FFFFFF;
+	line-height:40px;
+	text-align:center;
+	font-weight:bold;
+	color:#00659C;
+	border-radius:5px;
+	box-shadow:0px 0px 2px rgba(0,0,0,.5),
+	1px 1px 5px rgba(0,0,0,.3);
+	cursor:pointer;
+    display: inline-block;
+}
+
+.box7:hover{
+	background-color:#00659C;
+	color:white;
+
+}
+
+.box8{
+	width:80px;
+	-webkit-transition:all .5s;
+	background-color:white;
+	line-height:40px;
+	text-align:center;
+	font-weight:bold;
+	color:#00659C;
+	border-radius:5px;
+	box-shadow:0px 0px 2px rgba(0,0,0,.5),
+	1px 1px 5px rgba(0,0,0,.3);
+    cursor:pointer;
+    float: right;
+}
+
+.box8:hover{
+	background-color:#00659C;
+	color:white;
+}
+
+#btcChart {
+    margin-left: -22px;
+    margin-top: 10px;
+}
+
+#ethChart {
+    margin-top: 10px;
+}
+
+#ltcChart {
+    margin-top: 10px;
+}
+
+#xrpChart {
+    margin-top: 10px;
+}

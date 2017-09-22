@@ -1,0 +1,97 @@
+<% include partials/header %>
+<head>
+    <link rel="stylesheet" href="/stylesheets/ass.css"
+</head>
+
+<div class="container">
+    <div id="btc" class="col-md-3">
+        <img src="../img/btc logo2.ico" height="150" width="150">
+        <h4>Bitcoin</h4><br>
+        <div class="dropdown">
+            <button id="btcDropdown" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Payment Method
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Ethereum</a></li>
+                <li><a href="#">Litecoin</a></li>
+                <li><a href="#">Ripple</a></li>
+            </ul>
+        </div> <br><br>
+        <a href="/listings/btc">
+            <div class="box">Buy</div>
+        </a>
+        <a href="/listings/btc">
+            <div class="box2">Sell</div>
+        </a>
+    </div>
+    <div id="eth" class="col-md-3">
+        <img src="../img/ethereum1600.png" height="150" width="150">
+        <h4>Ethereum</h4><br>
+        <div class="dropdown">
+            <button id="ethDropdown" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Payment Method
+                    <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Bitcoin</a></li>
+                <li><a href="#">Litecoin</a></li>
+                <li><a href="#">Ripple</a></li>
+            </ul>
+        </div> <br><br>
+        <a href="/listings/eth">
+            <div class="box3">Buy</div>
+        </a>
+        <a href="/listings/eth">
+            <div class="box4">Sell</div>
+        </a>
+    </div>
+    <div id="ltc" class="col-md-3">
+        <img src="../img/litecoin-news.png" height="150" width="150">
+        <h4>Litecoin</h4><br>
+        <div class="dropdown">
+            <button id="ltcDropdown" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Payment Method
+                            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Bitcoin</a></li>
+                <li><a href="#">Ethereum</a></li>
+                <li><a href="#">Ripple</a></li>
+            </ul>
+        </div> <br><br>
+        <a href="/listings/ltc">
+            <div class="box5">Buy</div>
+        </a>
+        <a href="/listings/ltc">
+            <div class="box6">Sell</div>
+        </a>
+    </div>
+    <div id="xrp" class="col-md-3">
+            <img src="../img/ripple.png" height="150" width="150">
+            <h4>Ripple</h4><br>
+            <div class="dropdown">
+                <button id="xrpDropdown" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Payment Method
+                                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Bitcoin</a></li>
+                    <li><a href="#">Ethereum</a></li>
+                    <li><a href="#">Litecoin</a></li>
+                </ul>
+            </div> <br><br>
+            <a href="/listings/xrp">
+                <div class="box7">Buy</div>
+            </a>
+            <a href="/listings/xrp">
+                <div class="box8">Sell</div>
+            </a>
+        </div>
+        <br>
+        <div id="btcChart" class="col-md-3">
+                <script type="text/javascript">var cf_widget_size = "medium"; var cf_widget_from = "BTC"; var cf_widget_to = "btc"; var cf_clearstyle = true;</script><script src="https://www.worldcoinindex.com/content/widgets/js/render_widget-min.js" type="text/javascript"></script>
+        </div>
+        <div id="ethChart" class="col-md-3">
+                <script type="text/javascript">var cf_widget_size = "medium"; var cf_widget_from = "ETH"; var cf_widget_to = "usd"; var cf_clearstyle = true;</script><script src="https://www.worldcoinindex.com/content/widgets/js/render_widget-min.js" type="text/javascript"></script>
+        </div>
+        <div id="ltcChart" class="col-md-3">
+                <script type="text/javascript">var cf_widget_size = "medium"; var cf_widget_from = "LTC"; var cf_widget_to = "usd"; var cf_clearstyle = true;</script><script src="https://www.worldcoinindex.com/content/widgets/js/render_widget-min.js" type="text/javascript"></script>
+        </div>
+        <div id="xrpChart" class="col-md-3">
+                <script type="text/javascript">var cf_widget_size = "medium"; var cf_widget_from = "XRP"; var cf_widget_to = "usd"; var cf_clearstyle = true;</script><script src="https://www.worldcoinindex.com/content/widgets/js/render_widget-min.js" type="text/javascript"></script>
+        </div>
+</div>
+<% include partials/footer %>

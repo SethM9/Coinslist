@@ -1,0 +1,23 @@
+<% include ../partials/header %>
+
+<h1>Litecoin Listings</h1>
+<br>
+
+<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+    <% ltcListings.forEach(function(ltcListing){ %>
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail" id="complayout">
+                <div class="caption">
+                    <h4><%= ltcListing.title %></h4>
+                </div>
+                <h6><%= ltcListing.price %></h6>
+                <p>
+                    <a href="/listings/ltc/<%= ltcListing._id %>" class="btn btn-primary">More info</a>
+                </p>
+            </div>
+        </div>
+    <% }); %>
+</div>
+</div>
+
+<% include ../partials/footer %>

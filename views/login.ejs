@@ -1,0 +1,32 @@
+<% include partials/header %>
+<head>
+	<link rel="stylesheet" href="/stylesheets/loginreg.css">
+</head>
+
+	<div class="container">
+		<div class="jumbotron">
+			<h1 id="heading">Coinslist</h1>
+			<br>
+			<h3 class="heading">Welocome back</h3>
+		</div>
+	</div>
+
+<div class="row">
+	<div style="width: 30%; margin: 25px auto;">
+		<form action="/login" method="POST">
+			<div class="form-group has-feedback">
+				<input class="form-control" type="text" name="username" placeholder="username">
+				<i class="glyphicon glyphicon-user form-control-feedback"></i>
+			</div>
+			<div class="form-group has-feedback">
+				<input class="form-control" type="password" name="password" placeholder="password">
+				<i class="glyphicon glyphicon-lock form-control-feedback"></i>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-lg btn-primary btn-block">Login</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<% include partials/footer %>
