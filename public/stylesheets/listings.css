@@ -1,0 +1,65 @@
+.btcHead {
+    color: #F6931F;
+    padding: 2px;
+    text-align: center;
+}
+
+.ethHead {
+    color: #9FA8DA;
+    padding: 2px;
+    text-align: center;
+}
+
+.ltcHead {
+    color: #868686;
+    padding: 2px;
+    text-align: center;
+}
+
+.xrpHead {
+    color: #00A7E1;
+    padding: 2px;
+    text-align: center;
+}
+
+#listings {
+    border-radius: 15px 50px 30px;
+}
+
+.listPrice {
+    color: lawngreen;
+}
+
+#btcButton {
+    background-color: #F6931F;
+    border-color: #C57519;
+}
+
+#btcButton:hover {
+    background-color: #C57519;
+}
+
+#ethButton {
+    background-color: #9FA8DA;
+    border-color: #9FA8DA;
+}
+
+#ethButton:hover {
+    background-color: #5C6BC0;
+    border-color: #5C6BC0;
+}
+
+#ltcButton {
+    background-color: #868686;
+    border-color: #868686;
+}
+
+#xrpButton {
+    background-color: #00A7E1;
+    border-color: #00A7E1;
+}
+
+#xrpButton:hover {
+    background-color: #00659C;
+    border-color: #00659C;
+}

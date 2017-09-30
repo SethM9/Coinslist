@@ -40,5 +40,27 @@ router.post('/listings/xrp', middleware.isLoggedIn, function(req, res){
     })
 });
 
+router.get("/listings/xrp/:id", function (req, res) {
+    xrpListing.findById(req.params.id).exec(function (err, foundxrpListing) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render("listings/xrpShow", { xrpListing: foundxrpListing });
+        }
+    })
+});
+
+router.delete("/listings/xrp/:id", middleware.checkxrpListingOwnership, function (req, res) {
+    xrpListing.findByIdAndRemove(req.params.id, function (err) {
+        if (err) {
+            req.flash("error", "You don't have permission to do that");
+            res.redirect("/listings/xrp");
+        } else {
+            req.flash("error", "Listing removed successfully!");
+            res.redirect("/listings/xrp");
+        }
+    });
+});
+
 
 module.exports = router;

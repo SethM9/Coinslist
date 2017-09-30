@@ -1,0 +1,23 @@
+<% include ../partials/header %>
+
+<h1>Ripple Sell Listings</h1>
+<br>
+
+<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+    <% xrpSells.forEach(function(xrpSell){ %>
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail" id="complayout">
+                <div class="caption">
+                    <h4><%= xrpSell.title %></h4>
+                </div>
+                <h6><%= xrpSell.price %></h6>
+                <p>
+                    <a href="/listings/xrpSell/<%= xrpSell._id %>" class="btn btn-primary">More info</a>
+                </p>
+            </div>
+        </div>
+    <% }); %>
+</div>
+</div>
+
+<% include ../partials/footer %>

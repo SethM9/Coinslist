@@ -1,18 +1,21 @@
 <% include ../partials/header %>
-
-<h1>Litecoin Listings</h1>
+<head>
+    <link rel="stylesheet" href="/stylesheets/listings.css">
+</head>
+<div class="container">
+<h1 class="ltcHead">Buy Litecoin</h1>
 <br>
 
 <div class="row text-center" style="display:flex; flex-wrap: wrap;">
     <% ltcListings.forEach(function(ltcListing){ %>
         <div class="col-md-3 col-sm-6">
-            <div class="thumbnail" id="complayout">
+            <div class="thumbnail" id="listings">
                 <div class="caption">
-                    <h4><%= ltcListing.title %></h4>
+                    <h4 class="listPrice">$<%= ltcListing.price %> per LTC</h4>
                 </div>
-                <h6><%= ltcListing.price %></h6>
+                <h6><%= ltcListing.author.username %></h6>
                 <p>
-                    <a href="/listings/ltc/<%= ltcListing._id %>" class="btn btn-primary">More info</a>
+                    <a href="/listings/ltc/<%= ltcListing._id %>" class="btn btn-primary" id="ltcButton">More info</a>
                 </p>
             </div>
         </div>

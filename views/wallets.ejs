@@ -1,0 +1,44 @@
+<% include partials/header %>
+<head>
+    <link rel="stylesheet" href="/stylesheets/wallets.css">
+</head>
+<div id="container" class="container">
+    
+    <div id="btcWallet" class="col-md-6">
+        <h3>Balance: 0.377892BTC</h3><br>
+        <h5>Address:</h5>
+        <h5>1FfmbHfnpaZjKFvyi1okTjJJusN455paPH</h5>
+        <div class="send">Send</div>
+        <img src="/img/btc logo2.ico" height="75" width="75">
+    </div>
+
+    <div id="ethWallet" class="col-md-6">
+        <h3>Balance: 0.377892ETH</h3><br>
+        <h5>Address:</h5>
+        <h5>0xC257274276a4E539741Ca11b590B9447B26A8051</h5>
+        <div class="sendETH">Send</div>
+        <img src="/img/ethereum1600.png" height="75" width="75">
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <div class="walletHeader">
+    <h1><%= currentUser.username %>'s wallets</h1><br>
+    </div>
+    <div id="ltcWallet" class="col-md-6">
+        <h3>Balance: 0.377892LTC</h3><br>
+        <h5>Address:</h5>
+        <h5>LbSrCsZ95n5qzaHc7GEj9RuWiq5uT9gyLL</h5>
+        <div class="sendLTC">Send</div>
+        <img src="/img/litecoin-news.png" height="75" width="75">
+    </div>
+
+    <div id="xrpWallet" class="col-md-6">
+        <h3>Balance: 0.377892XRP</h3><br>
+        <h5>Address:</h5>
+        <h5>rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn</h5>
+        <div class="sendXRP">Send</div>
+        <img src="/img/ripple.png" height="75" width="75">
+    </div>
+</div>
+
+
+<% include partials/footer %>

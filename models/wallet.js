@@ -1,11 +1,8 @@
 var mongoose = require('mongoose');
 
-var btcListingSchema = new mongoose.Schema({
+var walletSchema = new mongoose.Schema({
     title: String,
-    price: String,
-    description: String,
-    payment: String,
-    author: {
+    owner: {
         id: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "User"
@@ -14,4 +11,4 @@ var btcListingSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model("btcListing", btcListingSchema);
+module.exports = mongoose.model("Wallet", walletSchema);

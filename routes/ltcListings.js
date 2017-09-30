@@ -40,5 +40,27 @@ router.post('/listings/ltc', middleware.isLoggedIn, function(req, res){
     })
 });
 
+router.get("/listings/ltc/:id", function (req, res) {
+    ltcListing.findById(req.params.id).exec(function (err, foundltcListing) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render("listings/ltcShow", { ltcListing: foundltcListing });
+        }
+    })
+});
+
+router.delete("/listings/ltc/:id", middleware.checkltcListingOwnership, function (req, res) {
+    ltcListing.findByIdAndRemove(req.params.id, function (err) {
+        if (err) {
+            req.flash("error", "You don't have permission to do that");
+            res.redirect("/listings/ltc");
+        } else {
+            req.flash("error", "Listing removed successfully!");
+            res.redirect("/listings/ltc");
+        }
+    });
+});
+
 
 module.exports = router;

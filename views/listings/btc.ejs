@@ -1,18 +1,23 @@
 <% include ../partials/header %>
-
-<h1>Bitcoin Listings</h1>
+<head>
+	<link rel="stylesheet" href="/stylesheets/listings.css">
+</head>
+<div class="container">
+<h1 class="btcHead">Buy Bitcoin!</h1>
 <br>
 
 <div class="row text-center" style="display:flex; flex-wrap: wrap;">
     <% btcListings.forEach(function(btcListing){ %>
         <div class="col-md-3 col-sm-6">
-            <div class="thumbnail" id="complayout">
+            <div class="thumbnail" id="listings">
                 <div class="caption">
-                    <h4><%= btcListing.title %></h4>
+                    <h4 class="listPrice">$<%= btcListing.price %> per BTC</h4>
                 </div>
-                <h6><%= btcListing.price %></h6>
+                <h5>Pay with: <%= btcListing.payment %></h5>
+                <br>
+                <h6>Submitted by: <%= btcListing.author.username %></h6>
                 <p>
-                    <a href="/listings/btc/<%= btcListing._id %>" class="btn btn-primary">More info</a>
+                    <a href="/listings/btc/<%= btcListing._id %>" class="btn btn-primary" id="btcButton">More info</a>
                 </p>
             </div>
         </div>

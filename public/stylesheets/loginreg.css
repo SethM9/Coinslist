@@ -31,3 +31,12 @@ label {
 	color: white;
 	text-decoration: underline;
 }
+
+#payment option {
+	width: 200px;
+}
+
+.payment {
+	background-color: white;
+}
+

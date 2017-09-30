@@ -8,20 +8,20 @@
     <div class="thumbnail">
         <div class="caption-full">
             <h4 class="pull-right">$
-                <%= btcListing.price %>
+                <%= ethSell.price %>
             </h4>
             <h3>
                 <a>
-                    <%= btcListing.title %>
+                    <%= ethSell.title %>
                 </a>
             </h3>
             <p>
-                <%= btcListing.description %>
+                <%= ethSell.description %>
             </p>
-            <p><em>Submitted by: <a href="/users/<%= btcListing.author.id %>"><%= btcListing.author.username %></a></em></p>
-            <% if(currentUser && btcListing.author.id.equals(currentUser._id)){ %>
-                <a class="btn btn-warning" href="/listings/btc/<%= btcListing._id %>/edit">Edit</a>
-                <form id="delete-form" action="/listings/btc/<%= btcListing._id %>?_method=DELETE" method="POST">
+            <p><em>Submitted by: <a href="/users/<%= ethSell.author.id %>"><%= ethSell.author.username %></a></em></p>
+            <% if(currentUser && ethSell.author.id.equals(currentUser._id)){ %>
+                <a class="btn btn-warning" href="/listings/ethSell/<%= ethSell._id %>/edit">Edit</a>
+                <form id="delete-form" action="/listings/ethSell/<%= ethSell._id %>?_method=DELETE" method="POST">
                     <button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
                 </form>
                 <% } %>

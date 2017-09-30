@@ -1,0 +1,147 @@
+#btcWallet {
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    width: 400px;
+    padding: 5px;
+    background: -webkit-linear-gradient(left top, #C57418, #F6931F); 
+    background: -o-linear-gradient(bottom right, #C57519, #F6931F); 
+    background: -moz-linear-gradient(bottom right, #C57519, #F6931F); 
+    background: linear-gradient(to bottom right, #C57519, #F6931F);
+}
+
+#ethWallet {
+    float: right;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    width: 400px;
+    background: -webkit-linear-gradient(left top, #5C6BC0, #9FA8DA); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #5C6BC0, #9FA8DA); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #5C6BC0, #9FA8DA); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #5C6BC0, #9FA8DA); /* Standard syntax */
+  }
+
+  #ltcWallet {
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    width: 400px;
+    padding: 5px;
+    background: -webkit-linear-gradient(left top, #868686, #EEEEEE); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #868686, #EEEEEE); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #868686, #EEEEEE); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #868686, #EEEEEE); /* Standard syntax */
+  }
+
+  #xrpWallet {
+    float: right;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    width: 400px;
+    background: -webkit-linear-gradient(left top, #00659C, #00A7E1); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #00659C, #00A7E1); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #00659C, #00A7E1); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #00659C, #00A7E1); /* Standard syntax */
+  }
+
+img {
+    float: right;
+}
+
+.send {
+    margin-top: 20px;
+    width:80px;
+	-webkit-transition:all .5s;
+	background-color:#FFFFFF;
+	line-height:40px;
+	text-align:center;
+	font-weight:bold;
+	color:#C57519;
+	border-radius:5px;
+	box-shadow:0px 0px 2px rgba(0,0,0,.5),
+	1px 1px 5px rgba(0,0,0,.3);
+	cursor:pointer;
+    display: inline-block;
+}
+
+.send:hover {
+    background-color: #C57418;
+    color: white;
+}
+
+.sendETH {
+    margin-top: 20px;
+    width:80px;
+	-webkit-transition:all .5s;
+	background-color:#FFFFFF;
+	line-height:40px;
+	text-align:center;
+	font-weight:bold;
+	color:#5C6BC0;
+	border-radius:5px;
+	box-shadow:0px 0px 2px rgba(0,0,0,.5),
+	1px 1px 5px rgba(0,0,0,.3);
+	cursor:pointer;
+    display: inline-block;
+}
+
+.sendETH:hover {
+    background-color: #5C6BC0;
+    color: white;
+}
+
+.sendLTC {
+    margin-top: 20px;
+    width:80px;
+	-webkit-transition:all .5s;
+	background-color:#FFFFFF;
+	line-height:40px;
+	text-align:center;
+	font-weight:bold;
+	color:#868686;
+	border-radius:5px;
+	box-shadow:0px 0px 2px rgba(0,0,0,.5),
+	1px 1px 5px rgba(0,0,0,.3);
+	cursor:pointer;
+    display: inline-block;
+}
+
+.sendLTC:hover {
+    background-color: #868686;
+    color: white;
+}
+
+.sendXRP {
+    margin-top: 20px;
+    width:80px;
+	-webkit-transition:all .5s;
+	background-color:#FFFFFF;
+	line-height:40px;
+	text-align:center;
+	font-weight:bold;
+	color:#00659C;
+	border-radius:5px;
+	box-shadow:0px 0px 2px rgba(0,0,0,.5),
+	1px 1px 5px rgba(0,0,0,.3);
+	cursor:pointer;
+    display: inline-block;
+}
+
+.sendXRP:hover {
+    background-color: #00659C;
+    color: white;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+.walletHeader {
+    text-align: center;
+}
+
+#container {
+    margin-top: 30px;
+}
+
+h5 {
+    text-align: center;
+}

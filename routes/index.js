@@ -3,8 +3,10 @@ var express = require("express"),
     passport = require('passport'),
     User = require('../models/user'),
     btcListing = require('../models/btcListing'),
+    btcSell = require('../models/btcSell'),
     ethListing = require('../models/ethListing'),
     ltcListing = require('../models/ltcListing'),
+    middleware = require('../middleware'),
     xrpListing = require('../models/xrpListing');
 
     
@@ -45,12 +47,30 @@ router.post("/login", passport.authenticate('local',{
     failureRedirect: 'login'
 }));
 
-router.get("/logout", function(req, res){
+router.get("/logout", middleware.isLoggedIn, function(req, res){
     req.logout();
     req.flash("success", "Successfully logged you out");
     res.redirect("/");
 });
 
+//User profile
+router.get("/users/:id", function(req, res){
+    User.findById(req.params.id, function(err, foundUser){
+        if(req.params.id == undefined){
+            req.flash("error", "User not found")
+            res.redirect("back");
+        } else {
+        btcListing.find().where("author.id").equals(foundUser._id).exec(function(err, btcListings){
+            if (req.params.id == undefined){
+                req.flash("error", "User not found")
+                res.redirect("back");
+            } else {
+            res.render("users/show", {user: foundUser, btcListings: btcListings});
+            }    
+        })
+    }
+    });
+ });
 
 
 module.exports = router;

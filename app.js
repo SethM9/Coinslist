@@ -5,7 +5,12 @@ var express = require("express"),
     flash = require("connect-flash"),
     methodOverride = require("method-override")
     User = require("./models/user"),
+    Wallet = require("./models/wallet"),
     btcListing = require("./models/btcListing"),
+    btcSell = require("./models/btcSell"),
+    ethSell = require("./models/ethSell"),
+    ltcSell = require("./models/ltcSell"),
+    xrpSell = require("./models/xrpSell"),
     ethListing = require('./models/ethListing'),
     ltcListing = require('./models/ltcListing'),
     xrpListing = require('./models/xrpListing'),
@@ -14,11 +19,16 @@ var express = require("express"),
       
 
 
+var walletRoutes = require("./routes/wallets");
 var authRoutes = require("./routes/index");
 var btcListingRoutes = require("./routes/btcListings");
 var ethListingRoutes = require("./routes/ethListings");
 var ltcListingRoutes = require("./routes/ltcListings");
 var xrpListingRoutes = require('./routes/xrpListings');
+var btcSellRoutes = require("./routes/btcSell");
+var ethSellRoutes = require("./routes/ethSell");
+var ltcSellRoutes = require("./routes/ltcSell");
+var xrpSellRoutes = require("./routes/xrpSell");
 
 app.use(methodOverride("_method"));
 app.use(flash());
@@ -53,6 +63,11 @@ app.use(btcListingRoutes);
 app.use(ethListingRoutes);
 app.use(ltcListingRoutes);
 app.use(xrpListingRoutes);
+app.use(btcSellRoutes);
+app.use(ethSellRoutes);
+app.use(ltcSellRoutes);
+app.use(xrpSellRoutes);
+app.use(walletRoutes);
 
 app.listen(3000, function(){
     console.log("Server is running on port 3000...");

@@ -39,6 +39,29 @@ router.post('/listings/eth', middleware.isLoggedIn, function(req, res){
             }
         })
     });
+
+router.get("/listings/eth/:id", function (req, res) {
+    ethListing.findById(req.params.id).exec(function (err, foundethListing) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render("listings/ethShow", { ethListing: foundethListing });
+        }
+    })
+});
+
+router.delete("/listings/eth/:id", middleware.checkethListingOwnership, function (req, res) {
+    ethListing.findByIdAndRemove(req.params.id, function (err) {
+        if (err) {
+            req.flash("error", "You don't have permission to do that");
+            res.redirect("/listings/eth");
+        } else {
+            req.flash("error", "Listing removed successfully!");
+            res.redirect("/listings/eth");
+        }
+    });
+});
+
     
 
 module.exports = router;
