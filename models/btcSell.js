@@ -3,6 +3,8 @@ var mongoose = require('mongoose');
 var btcSellSchema = new mongoose.Schema({
     title: String,
     price: String,
+    amount: String,
+    payment: String,
     description: String,
     author: {
         id: {

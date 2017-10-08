@@ -10,11 +10,22 @@
     <% btcListings.forEach(function(btcListing){ %>
         <div class="col-md-3 col-sm-6">
             <div class="thumbnail" id="listings">
-                <div class="caption">
-                    <h4 class="listPrice">$<%= btcListing.price %> per BTC</h4>
-                </div>
-                <h5>Pay with: <%= btcListing.payment %></h5>
+                <img src="/img/btc logo2.ico" height="75" width="75" style="float: left;">
+                <% if(btcListing.payment === "XRP"){ %>
+                <img src="/img/ripple.png" height="75" width="75" style="float: right;">
+               <% } else if(btcListing.payment === "ETH"){ %>
+                <img src="/img/ethereum1600.png" height="75" width="75" style="float: right;">
+                <% } else { %>
+                <img src="/img/litecoin-news.png" height="75" width="75" style="float: right;">
+                <% } %>
                 <br>
+                <h5>Pay with:
+                    <%= btcListing.payment %>
+                </h5>
+                <div class="caption">
+                    <h4 class="listPrice">$<%= btcListing.price %> per BTC</h4><br>
+                    <h5>Limit: <%= btcListing.amount %> BTC</h5>
+                </div>
                 <h6>Submitted by: <%= btcListing.author.username %></h6>
                 <p>
                     <a href="/listings/btc/<%= btcListing._id %>" class="btn btn-primary" id="btcButton">More info</a>

@@ -67,7 +67,7 @@ router.get("/users/:id", function(req, res){
             } else {
             res.render("users/show", {user: foundUser, btcListings: btcListings});
             }    
-        })
+        });
     }
     });
  });

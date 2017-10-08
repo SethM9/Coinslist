@@ -10,8 +10,21 @@
     <% ltcListings.forEach(function(ltcListing){ %>
         <div class="col-md-3 col-sm-6">
             <div class="thumbnail" id="listings">
+                    <img src="/img/litecoin-news.png" height="75" width="75" style="float: left;">
+                    <% if(ltcListing.payment === "XRP"){ %>
+                    <img src="/img/ripple.png" height="75" width="75" style="float: right;">
+                   <% } else if(ltcListing.payment === "ETH"){ %>
+                    <img src="/img/ethereum1600.png" height="75" width="75" style="float: right;">
+                    <% } else { %>
+                    <img src="/img/btc logo2.ico" height="75" width="75" style="float: right;">
+                    <% } %>
+                    <br>
+                    <h5>Pay with:
+                        <%= ltcListing.payment %>
+                    </h5>
                 <div class="caption">
                     <h4 class="listPrice">$<%= ltcListing.price %> per LTC</h4>
+                    <h5>Limit: <%= ltcListing.amount %>LTC</h5>
                 </div>
                 <h6><%= ltcListing.author.username %></h6>
                 <p>

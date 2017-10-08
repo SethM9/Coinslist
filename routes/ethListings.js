@@ -23,12 +23,14 @@ router.post('/listings/eth', middleware.isLoggedIn, function(req, res){
         //Get data from form and add new listings array
         var title = req.body.title;
         var price = req.body.price;
+        var amount = req.body.amount;
         var desc = req.body.description;
+        var payment = req.body.payment;
         var author = {
             id: req.user._id,
             username: req.user.username
         }
-        var newListing = {title: title, price: price, description: desc, author: author};
+        var newListing = {title: title, price: price, amount: amount, description: desc, payment: payment, author: author};
         //Create and save to DB
         ethListing.create(newListing, function(err, newlyCreated){
             if(err){

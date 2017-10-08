@@ -5,6 +5,7 @@ var btcListingSchema = new mongoose.Schema({
     price: String,
     description: String,
     payment: String,
+    amount: String,
     author: {
         id: {
             type: mongoose.Schema.Types.ObjectId,

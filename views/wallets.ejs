@@ -3,7 +3,6 @@
     <link rel="stylesheet" href="/stylesheets/wallets.css">
 </head>
 <div id="container" class="container">
-    
     <div id="btcWallet" class="col-md-6">
         <h3>Balance: 0.377892BTC</h3><br>
         <h5>Address:</h5>
@@ -39,6 +38,21 @@
         <img src="/img/ripple.png" height="75" width="75">
     </div>
 </div>
+<img class="btcSendFormLogo" src="/img/btc logo2.ico" height="75" width="75">
+<div class="btcSendForm">
+    <form>
+        <input class="form-control" type="text" name="btcAddress" placeholder="Receiving Bitcoin Address">
+        <input class="form-control" type="number" name="btcAmount" placeholder="Amount of Bitcoin to send">
+        <div class="form-control">
+            Estimated fee = .000024
+        </div>
+        <div class="form-group">
+            <button class="btn btn-lg btn-primary btn-block">Send</button>
+        </div>
+    </form>
+</div>
 
+<script src="js/jquery.min.js"></script>
+<script src="js/walletSend.js"></script>
 
 <% include partials/footer %>

@@ -1,26 +1,44 @@
 <% include ../partials/header %>
-<head>
-    <link rel="stylesheet" href="/stylesheets/listings.css">
-</head>
-<div class="container">
-<h1 class="ethHead">Buy Ethereum</h1>
-<br>
 
-<div class="row text-center" style="display:flex; flex-wrap: wrap;">
-    <% ethListings.forEach(function(ethListing){ %>
-        <div class="col-md-3 col-sm-6">
-            <div class="thumbnail" id="listings">
-                <div class="caption">
-                    <h4 class="listPrice">$<%= ethListing.price %> per ETH</h4>
+    <head>
+        <link rel="stylesheet" href="/stylesheets/listings.css">
+    </head>
+    <div class="container">
+        <h1 class="ethHead">Buy Ethereum</h1>
+        <br>
+
+        <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+            <% ethListings.forEach(function(ethListing){ %>
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnail" id="listings">
+                        <img src="/img/ethereum1600.png" height="75" width="75" style="float: left;">
+                        <% if(ethListing.payment === "XRP"){ %>
+                            <img src="/img/ripple.png" height="75" width="75" style="float: right;">
+                            <% } else if(ethListing.payment === "BTC"){ %>
+                                <img src="/img/btc logo2.ico" height="75" width="75" style="float: right;">
+                                <% } else { %>
+                                    <img src="/img/litecoin-news.png" height="75" width="75" style="float: right;">
+                                    <% } %>
+                                        <br>
+                                        <h5>Pay with:
+                                            <%= ethListing.payment %>
+                                        </h5>
+                                        <br>
+                                        <div class="caption">
+                                            <h4 class="listPrice">$
+                                                <%= ethListing.price %> per ETH</h4>
+                                            <h5>Limit: <%= ethListing.amount %>ETH</h5>
+                                        </div>
+                                        <h6>Submitted by:
+                                            <%= ethListing.author.username %>
+                                        </h6>
+                                        <p>
+                                            <a href="/listings/eth/<%= ethListing._id %>" class="btn btn-primary" id="ethButton">More info</a>
+                                        </p>
+                    </div>
                 </div>
-                <h6><%= ethListing.author.username %></h6>
-                <p>
-                    <a href="/listings/eth/<%= ethListing._id %>" class="btn btn-primary" id="ethButton">More info</a>
-                </p>
-            </div>
+                <% }); %>
         </div>
-    <% }); %>
-</div>
-</div>
+    </div>
 
 <% include ../partials/footer %>

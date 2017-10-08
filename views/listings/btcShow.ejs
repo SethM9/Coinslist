@@ -1,33 +1,38 @@
 <% include ../partials/header %>
-<head>
-    <link rel="stylesheet" href="/stylesheets/Show.css">
-</head>
 
-<div class="container">
-<div class="col-md-9" style="margin-left: 125px;">
-    <div class="thumbnail">
-        <div class="caption-full">
-            <h4 class="pull-right">$
-                <%= btcListing.price %>
-            </h4>
-            <h3>
-                <a>
-                    <%= btcListing.title %>
-                </a>
-            </h3>
-            <p>
-                <%= btcListing.description %>
-            </p>
-            <p><em>Submitted by: <a href="/users/<%= btcListing.author.id %>"><%= btcListing.author.username %></a></em></p>
-            <% if(currentUser && btcListing.author.id.equals(currentUser._id)){ %>
-                <a class="btn btn-warning" href="/listings/btc/<%= btcListing._id %>/edit">Edit</a>
-                <form id="delete-form" action="/listings/btc/<%= btcListing._id %>?_method=DELETE" method="POST">
-                    <button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
-                </form>
-                <% } %>
+    <head>
+        <link rel="stylesheet" href="/stylesheets/Show.css">
+    </head>
+
+    <div class="container">
+        <div class="col-md-9" style="margin-left: 125px; text-align:center;">
+            <div class="thumbnail">
+                <div class="caption-full">
+                    <h3>
+                        <a>
+                            <%= btcListing.title %>
+                        </a><br><br>
+                    </h3>
+                    <h4 style="color: #62B611;">$
+                        <%= btcListing.price %>
+                    </h4>
+                    <h5>Limit: <%= btcListing.amount %>BTC</h5>
+                    <br>
+                    <h4>Seller's rules:</h4>
+                    <p style="width: 50%; margin-left: 25%;">
+                        <%= btcListing.description %>
+                    </p>
+                    <br><br>
+                    <p><em>Submitted by: <a href="/users/<%= btcListing.author.id %>"><%= btcListing.author.username %></a></em></p>
+                    <% if(currentUser && btcListing.author.id.equals(currentUser._id)){ %>
+                        <a class="btn btn-warning" href="/listings/btc/<%= btcListing._id %>/edit">Edit</a>
+                        <form id="delete-form" action="/listings/btc/<%= btcListing._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+                        </form>
+                        <% } %>
+                </div>
+            </div>
         </div>
-    </div>  
-</div>
-</div>
+    </div>
 
-<% include ../partials/footer %>
+    <% include ../partials/footer %>

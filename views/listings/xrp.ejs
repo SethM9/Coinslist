@@ -10,10 +10,23 @@
     <% xrpListings.forEach(function(xrpListing){ %>
         <div class="col-md-3 col-sm-6">
             <div class="thumbnail" id="listings">
+                    <img src="/img/ripple.png" height="75" width="75" style="float: left;">
+                    <% if(xrpListing.payment === "BTC"){ %>
+                    <img src="/img/btc logo2.ico" height="75" width="75" style="float: right;">
+                   <% } else if(xrpListing.payment === "ETH"){ %>
+                    <img src="/img/ethereum1600.png" height="75" width="75" style="float: right;">
+                    <% } else { %>
+                    <img src="/img/litecoin-news.png" height="75" width="75" style="float: right;">
+                    <% } %>
+                    <br>
+                    <h5>Pay with:
+                        <%= xrpListing.payment %>
+                    </h5>
                 <div class="caption">
                     <h4 class="listPrice">$<%= xrpListing.price %></h4>
+                    <h5>Limit: <%= xrpListing.amount %>XRP</h5>
                 </div>
-                <h6><%= xrpListing.author.username %></h6>
+                <h6>Submitted by: <%= xrpListing.author.username %></h6></a>
                 <p>
                     <a href="/listings/xrp/<%= xrpListing._id %>" class="btn btn-primary" id="xrpButton">More info</a>
                 </p>
